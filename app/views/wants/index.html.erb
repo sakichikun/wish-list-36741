@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @wants.each do |want| %>
+    <div class="content_post">
+      <p><%= want.title %></p>
+      <span class="name">
+        <%= want.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
