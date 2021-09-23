@@ -1,13 +1,12 @@
-<div class="contents row">
+<div class="contents_row">
   <% @wants.each do |want| %>
     <div class="content_post">
-      <p><%= want.title %></p>
-      <span class="name">
-        <%= want.name %>
-      </span>
-      <%= link_to '詳細', want_path(want.id), method: :get %>
-      <%= link_to '編集', edit_want_path(want.id), method: :get %>
-      <%= link_to '削除', want_path(want.id), method: :delete %>
+      <p class="text"><%= want.title %></p>
+      <div class="name"><%= "投稿者：#{want.name}さん" %></div>
+      <%= link_to '詳細', want_path(want.id), method: :get, class:"btn-flat-border" %>
+      <%= link_to '編集', edit_want_path(want.id), method: :get, class:"btn-flat-border" %>
+      <%= link_to '削除', want_path(want.id), method: :delete, class:"btn-flat-border" %>
     </div>
+    <hr>
   <% end %>
 </div>

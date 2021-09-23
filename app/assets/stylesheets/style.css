@@ -1,0 +1,59 @@
+/* I wanna eat SALMONのアレンジ */
+h1 {
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+  position: relative;
+  padding: 1.5rem 2rem;
+  -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+}
+
+h1:before,
+h1:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+}
+
+h1:before {
+  top: 0;
+}
+
+h1:after {
+  bottom: 0;
+}
+
+/* 投稿するボタン */
+.header__bar row {
+  position: relative;
+}
+
+.user_post {
+  float: right;
+  margin-right: 5vw;
+}
+
+.btn-circle-fishy {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+  transition: .4s;
+}
+
+.btn-circle-fishy:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
