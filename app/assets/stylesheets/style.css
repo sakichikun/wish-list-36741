@@ -57,3 +57,12 @@ h1:after {
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
 }
+
+footer {
+  text-align: center;
+}
+
+/* ログイン・新規登録画面 */
+.log_main {
+  text-align: center;
+}
