@@ -1,11 +1,11 @@
 <div class="contents row">
   <div class="container">
     <h3>新規投稿</h3>
-    <%= form_with(model: @want, local: true) do |form| %>
+    <%= form_with model: @want, local: true do |form| %>
       <%= form.text_field :name, placeholder: "Nickname" %>
       <%= form.text_field :title, placeholder: "A new bucket list" %>
       <%= form.submit "SEND" %>
+      <%= link_to '戻る', wants_path %>
     <% end %>
-    <%= link_to '戻る', wants_path %>
   </div>
 </div>
