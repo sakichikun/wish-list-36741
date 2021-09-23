@@ -17,6 +17,12 @@ class WantsController < ApplicationController
     end
   end
 
+  def destroy
+    want = Want.find(params[:id])
+    want.destroy
+    redirect_to root_path
+  end
+
   private
   def want_params
     params.require(:want).permit(:name, :title)
