@@ -5,6 +5,7 @@
       <span class="name">
         <%= want.name %>
       </span>
+      <%= link_to '詳細', want_path(want.id), method: :get %>
       <%= link_to '編集', edit_want_path(want.id), method: :get %>
       <%= link_to '削除', want_path(want.id), method: :delete %>
     </div>

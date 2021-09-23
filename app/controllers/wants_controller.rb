@@ -1,5 +1,5 @@
 class WantsController < ApplicationController
-  before_action :set_item, only: [:edit, :update, :destroy]
+  before_action :set_item, only: [:edit, :update, :destroy, :show]
 
   def index
     @wants = Want.all
@@ -34,6 +34,9 @@ class WantsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
   end
 
   private
