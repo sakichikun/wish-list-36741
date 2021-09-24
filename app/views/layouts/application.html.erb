@@ -15,6 +15,7 @@
         <h1 class="top_title"><a href="/">I WANNA eat SALMON</a></h1>
         <% if user_signed_in? %>
           <div class="user_post">
+            <%= link_to "マイページ", user_path(current_user.id) %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
             <%= link_to "投稿する", new_wish_path, class: "btn-circle-fishy" %>
           </div>

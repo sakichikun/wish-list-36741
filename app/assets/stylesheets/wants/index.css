@@ -14,6 +14,10 @@
 }
 
 /* 投稿一覧 */
+.contents_row {
+  text-align: center;
+}
+
 .content_post {
   text-align: center;
   width: 80vw;

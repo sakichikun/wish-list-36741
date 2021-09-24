@@ -1,16 +1,11 @@
 <div class="contents_row">
   <div class="my_top">
-    <p><b>BUCKET LISTS</b> 一覧</p>
+    <p><b><%= @nickname %></b> さんの BUCKET LIST</p>
   </div>
   <div class="list_frame">
     <% @wishes.each do |wish| %>
       <div class="content_post">
         <p class="text"><%= wish.title %></p>
-        <span class="name">
-          <a href="/users/<%= wish.user.id %>">
-            <span>投稿者：<%= wish.user.nickname %> さん</span>
-          </a>
-        </span>
         <p>
         <%= link_to '詳細', wish_path(wish.id), method: :get, class:"btn-flat-border" %>
         <%= link_to '編集', edit_wish_path(wish.id), method: :get, class:"btn-flat-border" %>

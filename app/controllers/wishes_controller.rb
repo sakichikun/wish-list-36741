@@ -3,8 +3,7 @@ class WishesController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @wishes = Wish.all
-    @wishes = Wish.order("created_at DESC")
+    @wishes = Wish.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -43,7 +42,7 @@ class WishesController < ApplicationController
 
   private
   def wish_params
-    params.require(:wish).permit(:name, :title).merge(user_id: current_user.id)
+    params.require(:wish).permit(:title).merge(user_id: current_user.id)
   end
 
   def set_item

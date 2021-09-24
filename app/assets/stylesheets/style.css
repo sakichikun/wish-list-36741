@@ -5,6 +5,7 @@ h1 {
   padding: 1.5rem 2rem;
   -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
   box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+  margin-bottom: 10vh;
 }
 
 h1:before,

@@ -1,0 +1,67 @@
+/* 上のリボン見出し */
+
+.my_top {
+  display: inline-block;
+  position: relative;
+  height: 45px;
+  text-align: center;
+  box-sizing: border-box; /* 型崩れを防ぐ */
+  box-shadow: 0 0 8px gray;
+}
+
+.my_top:before{/*左側のリボン端*/
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  left: -25px;
+  z-index: -2; /* 重なりが下になるように */
+  border: 20px solid #DAAF08;
+  border-left-color: transparent;/*山形に切り抜き*/
+}
+
+.my_top:after {/*右側のリボン端*/
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  right: -25px;
+  z-index: -2;
+  border: 20px solid #DAAF08;
+  border-right-color: transparent;/*山形に切り抜き*/
+}
+
+.my_top p {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 45px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  background: linear-gradient(to right, #B67B03 0%, #DAAF08 15%, #FEE9A0 35%, #DAAF08 75%, #B67B03 100%);/*真ん中の背景色*/
+}
+
+.my_top p:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border-bottom: solid 10px transparent;
+  border-right: solid 15px #B67B03;/*左の折り返し部分*/
+}
+
+.my_top p:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border-bottom: solid 10px transparent;
+  border-left: solid 15px #B67B03;/*右の折り返し部分*/
+}
+
+/* 一覧の枠組み */
+.list_frame {
+  margin-top: 10vh;
+}

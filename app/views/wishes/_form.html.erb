@@ -1,5 +1,4 @@
 <%= form_with model: @wish, local: true do |form| %>
-  <%= form.text_field :name, placeholder: "Nickname" %>
   <%= form.text_field :title, placeholder: "A new bucket list" %>
   <%= form.submit "SEND" %>
   <%= link_to '戻る', wishes_path %>
