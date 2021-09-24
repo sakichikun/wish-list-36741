@@ -42,7 +42,7 @@ class WantsController < ApplicationController
 
   private
   def want_params
-    params.require(:want).permit(:name, :title)
+    params.require(:want).permit(:name, :title).merge(user_id: current_user.id)
   end
 
   def set_item
