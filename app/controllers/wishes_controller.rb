@@ -4,6 +4,7 @@ class WishesController < ApplicationController
 
   def index
     @wishes = Wish.all
+    @wishes = Wish.order("created_at DESC")
   end
 
   def new
