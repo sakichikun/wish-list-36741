@@ -1,5 +1,6 @@
 class WantsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :destroy, :show]
+  before_action :move_to_index, except: :index
 
   def index
     @wants = Want.all
@@ -46,5 +47,11 @@ class WantsController < ApplicationController
 
   def set_item
     @want = Want.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end
