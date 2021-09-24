@@ -9,9 +9,9 @@
 
 ### Association
 
-- has_many :wants
+- has_many :wishes
 
-## wants テーブル
+## wishes テーブル
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
 | name                  | string     | null: false                    |
