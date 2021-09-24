@@ -1,19 +1,19 @@
-class WantsController < ApplicationController
+class WishesController < ApplicationController
   before_action :set_item, only: [:edit, :update, :destroy, :show]
   before_action :move_to_index, except: :index
 
   def index
-    @wants = Want.all
+    @wishes = Wish.all
   end
 
   def new
-    @want = Want.new
+    @wish = Wish.new
   end
 
   def create
-    @want = Want.new(want_params)
-    if @want.valid?
-      @want.save
+    @wish = Wish.new(wish_params)
+    if @wish.valid?
+      @wish.save
       redirect_to root_path
     else
       render 'new'
@@ -21,7 +21,7 @@ class WantsController < ApplicationController
   end
 
   def destroy
-    @want.destroy
+    @wish.destroy
     redirect_to root_path
   end
 
@@ -29,8 +29,8 @@ class WantsController < ApplicationController
   end
 
   def update
-    @want.update(want_params)
-    if @want.save
+    @wish.update(wish_params)
+    if @wish.save
       redirect_to root_path
     else
       render :edit
@@ -41,12 +41,12 @@ class WantsController < ApplicationController
   end
 
   private
-  def want_params
-    params.require(:want).permit(:name, :title).merge(user_id: current_user.id)
+  def wish_params
+    params.require(:wish).permit(:name, :title).merge(user_id: current_user.id)
   end
 
   def set_item
-    @want = Want.find(params[:id])
+    @wish = Wish.find(params[:id])
   end
 
   def move_to_index

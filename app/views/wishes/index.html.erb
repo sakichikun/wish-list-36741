@@ -1,0 +1,12 @@
+<div class="contents_row">
+  <% @wishes.each do |wish| %>
+    <div class="content_post">
+      <p class="text"><%= wish.title %></p>
+      <div class="name"><%= "投稿者：#{wish.name}さん" %></div>
+      <%= link_to '詳細', wish_path(wish.id), method: :get, class:"btn-flat-border" %>
+      <%= link_to '編集', edit_wish_path(wish.id), method: :get, class:"btn-flat-border" %>
+      <%= link_to '削除', wish_path(wish.id), method: :delete, class:"btn-flat-border" %>
+    </div>
+    <hr>
+  <% end %>
+</div>

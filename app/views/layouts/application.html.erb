@@ -16,7 +16,7 @@
         <% if user_signed_in? %>
           <div class="user_post">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "投稿する", new_want_path, class: "btn-circle-fishy" %>
+            <%= link_to "投稿する", new_wish_path, class: "btn-circle-fishy" %>
           </div>
         <% else %>
           <div class="user_post">
