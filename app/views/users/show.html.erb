@@ -6,11 +6,7 @@
     <% @wishes.each do |wish| %>
       <div class="content_post">
         <p class="text"><%= wish.title %></p>
-        <p>
-        <%= link_to '詳細', wish_path(wish.id), method: :get, class:"btn-flat-border" %>
-        <%= link_to '編集', edit_wish_path(wish.id), method: :get, class:"btn-flat-border" %>
-        <%= link_to '削除', wish_path(wish.id), method: :delete, class:"btn-flat-border" %>
-        </p>
+        <%= render partial: "wishes/button", locals: { wish: wish} %>
       </div>
       <hr>
     <% end %>
