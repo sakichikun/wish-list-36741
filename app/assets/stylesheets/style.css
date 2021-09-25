@@ -67,3 +67,7 @@ footer {
 .log_main {
   text-align: center;
 }
+
+ul {
+  list-style: none;
+}
