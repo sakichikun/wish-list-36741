@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
-    Comment.create(comment_params)
-    redirect_to "/wishes/#{comment.wish.id}"
+    @comment = Comment.create(comment_params)
+    redirect_to action: :index, controller: 'wishes'
   end
 
   private

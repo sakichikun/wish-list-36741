@@ -1,4 +1,5 @@
 <div class="contents_row">
+  <%= link_to '戻る', wishes_path %>
   <div class="content_post">
     <p class="text"><%= @wish.title %></p>
       <span class="name">
@@ -12,6 +13,25 @@
         <%= link_to '削除', wish_path(@wish.id), method: :delete, class:"btn-flat-border" %>
       <% end %>
     </p>
-    <%= link_to '戻る', wishes_path %>
+  </div>
+  <div class="comments">
+    <h3>コメント</h3>
+    <%= form_with model: [@wish, @comment], local: true do |f| %>
+      <div class="field">
+        <%= f.label :text, "コメント" %><br />
+        <%= f.text_field :text, id:"comment_text" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "送信する", class: :form_btm %>
+      </div>
+    <% end %>
+    <ul>
+      <% @comments.each do |comment| %>
+        <li>
+          <%= comment.text %>
+          <%= link_to comment.user.nickname, "users/#{comment.user.id}", class: :comment_user %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>

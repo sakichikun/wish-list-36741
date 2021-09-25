@@ -41,6 +41,8 @@ class WishesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @wish.comments.includes(:user)
   end
 
   private
