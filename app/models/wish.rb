@@ -3,4 +3,12 @@ class Wish < ApplicationRecord
 
   belongs_to :user
   has_many :comments, dependent: :destroy
+
+  def self.search(search)
+    if search != ""
+      Wish.where('title LIKE(?)', "%#{search}%")
+    else
+      Wish.all
+    end
+  end
 end

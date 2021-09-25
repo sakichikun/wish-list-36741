@@ -45,6 +45,10 @@ class WishesController < ApplicationController
     @comments = @wish.comments.includes(:user)
   end
 
+  def search
+    @wishes = Wish.search(params[:keyword])
+  end
+
   private
   def wish_params
     params.require(:wish).permit(:title).merge(user_id: current_user.id)

@@ -1,17 +1,17 @@
 <div class="contents_row">
   <div class="my_top">
-    <p><b>BUCKET LISTS</b> 一覧</p>
+    <p><b>BUCKET LISTS</b> 検索結果</p>
   </div>
   <%= render partial: "search" %>
-  <div class="list_frame">
+  <div class="contents row">
     <% @wishes.each do |wish| %>
       <div class="content_post">
         <p class="text"><%= wish.title %></p>
-        <span class="name">
-          <a href="/users/<%= wish.user.id %>">
-            <span>投稿者：<%= wish.user.nickname %> さん</span>
-          </a>
-        </span>
+          <span class="name">
+            <a href="/users/<%= wish.user.id %>">
+              <span>投稿者：<%= wish.user.nickname %> さん</span>
+            </a>
+          </span>
         <%= render partial: "button", locals: { wish: wish} %>
       </div>
       <hr>

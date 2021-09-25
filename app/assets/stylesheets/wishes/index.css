@@ -1,3 +1,8 @@
+/* 検索フォーム */
+.search_form {
+  margin-top: 10vh;
+}
+
 /* 詳細・編集・削除ボタン */
 .btn-flat-border {
   display: inline-block;
