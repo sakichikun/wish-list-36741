@@ -1,7 +1,8 @@
 <div class="list_frame">
-  <%= form_with model: @wish, local: true do |form| %>
-    <%= form.text_field :title, placeholder: "A new bucket list" %>
-    <%= form.submit "SEND" %>
+  <%= form_with model: @wish, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+    <%= f.text_field :title, placeholder: "A new bucket list" %>
+    <%= f.submit "SEND" %>
     <%= link_to '戻る', wishes_path %>
   <% end %>
 </div>
