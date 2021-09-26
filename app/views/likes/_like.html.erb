@@ -1,13 +1,13 @@
 <% if user_signed_in? %>
   <% if current_user.liked_by?(wish.id) %>
-    <td>
+    <p>
       <%= link_to 'いいねを外す', destroy_like_path(wish.id), method: :delete, remote: true %>
       <%= wish.likes.count %>
-    </td>
+    </p>
   <% else %>
-    <td>
+    <p>
       <%= link_to 'いいね', create_like_path(wish.id),method: :POST, remote: true %>
       <%= wish.likes.count %>
-    </td>
+    </p>
   <% end %>
 <% end %>
