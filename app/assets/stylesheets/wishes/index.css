@@ -35,4 +35,10 @@ hr {
   background:linear-gradient(to right, white, gray, white);
   height: 3px;
   width: 60vw;
-  }
+}
+
+/* いいねボタン */
+.good_button {
+  text-align: center;
+}
+

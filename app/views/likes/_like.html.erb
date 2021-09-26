@@ -6,7 +6,7 @@
     </td>
   <% else %>
     <td>
-      <%= link_to 'いいね', create_like_path(wish.id), method: :POST, remote: true %>
+      <%= link_to 'いいね', create_like_path(wish.id),method: :POST, remote: true %>
       <%= wish.likes.count %>
     </td>
   <% end %>
