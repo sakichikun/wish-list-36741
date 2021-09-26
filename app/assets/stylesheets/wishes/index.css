@@ -21,6 +21,7 @@
 /* 投稿一覧 */
 .contents_row {
   text-align: center;
+  margin-top: 130px;
 }
 
 .content_post {

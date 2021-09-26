@@ -1,3 +1,11 @@
+/* header全体 */
+header {
+  height: 160px;
+  padding: 10px 0;
+  margin: 0 15vw;
+  text-align: center;
+}
+
 /* I wanna eat SALMONのアレンジ */
 h1 {
   font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
@@ -5,8 +13,9 @@ h1 {
   padding: 1.5rem 2rem;
   -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
   box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
 }
+
 
 h1:before,
 h1:after {
@@ -32,15 +41,7 @@ h1:after {
   position: relative;
 }
 
-.user_post {
-  float: right;
-  margin-right: 5vw;
-}
-
 .btn-circle-fishy {
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
   display: inline-block;
   text-decoration: none;
   color: #FFF;
@@ -66,6 +67,7 @@ footer {
 /* ログイン・新規登録画面 */
 .log_main {
   text-align: center;
+  margin-top: 130px;
 }
 
 ul {
