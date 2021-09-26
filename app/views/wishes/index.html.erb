@@ -3,6 +3,7 @@
     <p><b>BUCKET LISTS</b> 一覧</p>
   </div>
   <%= render partial: "search" %>
+  <hr>
   <div class="list_frame">
     <% @wishes.each do |wish| %>
       <div class="content_post">
@@ -12,6 +13,9 @@
             <span>投稿者：<%= wish.user.nickname %> さん</span>
           </a>
         </span>
+        <div id="likes_buttons_<%= wish.id %>">
+          <%= render partial: 'likes/like', locals: {wish: wish} %>
+        </div>
         <%= render partial: "button", locals: { wish: wish} %>
       </div>
       <hr>

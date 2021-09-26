@@ -8,4 +8,9 @@ class User < ApplicationRecord
 
   has_many :wishes, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  def liked_by?(wish_id)
+    likes.where(wish_id: wish_id).exists?
+  end
 end
