@@ -7,6 +7,9 @@
           <span>投稿者：<%= @wish.user.nickname %> さん</span>
         </a>
       </span>
+      <div id="likes_buttons_<%= @wish.id %>">
+          <%= render partial: 'likes/like', locals: {wish: @wish} %>
+      </div>
     <p>
       <% if user_signed_in? && current_user.id == @wish.user_id %>
         <%= link_to '編集', edit_wish_path(@wish.id), method: :get, class:"btn-flat-border" %>

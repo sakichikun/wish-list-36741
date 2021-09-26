@@ -6,6 +6,9 @@
     <% @wishes.each do |wish| %>
       <div class="content_post">
         <p class="text"><%= wish.title %></p>
+        <div id="likes_buttons_<%= wish.id %>">
+          <%= render partial: 'likes/like', locals: {wish: wish} %>
+        </div>
         <%= render partial: "wishes/button", locals: { wish: wish} %>
       </div>
       <hr>

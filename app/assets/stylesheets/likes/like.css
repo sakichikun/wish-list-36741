@@ -1,0 +1,18 @@
+.star {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(-45deg, #b8751e 0%, #ffce08 37%, #fefeb2 47%, #fafad6 50%, #fefeb2 53%, #e1ce08 63%, #b8751e 100%);
+  border-radius: 40%;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.star:active {
+  box-shadow: none;
+}
