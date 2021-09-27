@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :set_item
+  before_action :move_to_index
 
   def create
     Like.create(user_id: current_user.id, wish_id: params[:id])
@@ -11,6 +12,9 @@ class LikesController < ApplicationController
 
   def show
     @likes = @wish.likes.includes(:user)
+    unless user_signed_in? && current_user.id == @wish.user_id
+      redirect_to root_path
+    end
   end
 
   private
@@ -20,5 +24,11 @@ class LikesController < ApplicationController
 
   def set_item
     @wish = Wish.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end
