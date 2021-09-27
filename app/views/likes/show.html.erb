@@ -1,0 +1,14 @@
+<div class="contents_row">
+  <div class="my_top">
+    <p>いいね 一覧</p>
+  </div>
+  <div class="name_show">
+    <% @likes.each do |like| %>
+      <div class="name_list">
+        <a href="/users/<%= like.user.id %>">
+          <span><%= like.user.nickname %> さん</span>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

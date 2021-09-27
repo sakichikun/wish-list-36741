@@ -16,3 +16,11 @@
 .star:active {
   box-shadow: none;
 }
+
+.name_show {
+  margin-top: 50px;
+}
+
+.name_list {
+  text-align: center;
+}
