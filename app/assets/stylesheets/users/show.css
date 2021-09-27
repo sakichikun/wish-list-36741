@@ -63,5 +63,10 @@
 
 /* 一覧の枠組み */
 .list_frame {
-  margin-top: 5vh;
+  margin: 0 auto;
+  width: 80vh;
+  text-align: center;
+  padding: 3vw 3vw 0;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
