@@ -100,3 +100,58 @@ hr {
   text-shadow: 0 0 0.2em rgba(0,0,0,1);
   margin-right: 10px;
 }
+
+.state_markkk {
+  font-size:30px;
+  text-align:center;
+  line-height:0.95em;
+  font-weight:bold; /* 太字 */
+  color: gray;
+  text-shadow: 0 0 0.1em rgba(0,0,0,1);
+  margin-right: 10px;
+}
+
+.comments {
+  margin-top: 30px;
+}
+
+.paper {
+  font-size: 14px;
+  margin: 30px auto;
+  position: relative;
+  padding: 0.8em;
+  width:400px;
+  background:#F2EFE7;
+  list-style: none;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+}
+
+.paper li {
+  position:relative;
+  font-weight: bold;
+  color: #333;
+  border-bottom:dashed 1px #ccc;
+  padding:4px 0 4px 2em;
+}
+
+.paper li:last-child{
+  margin-bottom: 15px;
+}
+
+.paper li:before{
+  content: "・";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.old_lists {
+  text-align: left;
+}

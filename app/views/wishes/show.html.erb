@@ -1,39 +1,48 @@
 <div class="contents_row">
-  <%= link_to '戻る', wishes_path %>
-  <div class="content_post">
-    <p class="text"><%= @wish.title %></p>
-      <span class="name">
-        <a href="/users/<%= @wish.user.id %>">
-          <span>投稿者：<%= @wish.user.nickname %> さん</span>
-        </a>
-      </span>
-      <div id="likes_buttons_<%= @wish.id %>">
-          <%= render partial: 'likes/like', locals: {wish: @wish} %>
-      </div>
-    <p>
-      <% if user_signed_in? && current_user.id == @wish.user_id %>
-        <%= link_to '編集', edit_wish_path(@wish.id), method: :get, class:"btn-flat-border" %>
-        <%= link_to '削除', wish_path(@wish.id), method: :delete, class:"btn-flat-border" %>
-      <% end %>
-    </p>
+  <div class="my_top">
+    <p><b>BUCKET LIST</b> 詳細</p>
   </div>
-  <div class="comments">
-    <%= form_with model: [@wish, @comment], local: true do |f| %>
-      <div class="field">
-        <%= f.label :text, "コメント" %><br />
-        <%= f.text_field :text, id:"comment_text" %>
-      </div>
-      <div class="actions">
-        <%= f.submit "送信する", class: :form_btm %>
-      </div>
-    <% end %>
-    <ul>
-      <% @comments.each do |comment| %>
-        <li>
-          <%= comment.text %>
-          <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
-        </li>
+  <div class="list_frame">
+    <div class="content_post">
+      <p class="text">
+        <i class="far fa-lightbulb fa-2x"></i>
+        <%= @wish.title %>
+      </p>
+        <span class="state_mark"><%= @wish.state.name %></span>
+        <span class="name">
+          <a href="/users/<%= @wish.user.id %>">
+            <span>投稿者：<%= @wish.user.nickname %> さん</span>
+          </a>
+        </span>
+        <div id="likes_buttons_<%= @wish.id %>">
+            <%= render partial: 'likes/like', locals: {wish: @wish} %>
+        </div>
+      <p>
+        <% if user_signed_in? && current_user.id == @wish.user_id %>
+          <%= link_to '編集', edit_wish_path(@wish.id), method: :get, class:"btn-flat-border" %>
+          <%= link_to '削除', wish_path(@wish.id), method: :delete, class:"btn-flat-border" %>
+          <%= link_to '戻る', wishes_path, class:"btn-flat-border" %>
+        <% end %>
+      </p>
+    </div>
+    <hr>
+    <div class="comments">
+      <%= form_with model: [@wish, @comment], local: true do |f| %>
+        <div class="field">
+          <%= f.label :text, "「コメント」", class: "state_markkk" %><br />
+          <%= f.text_field :text, id:"comment_text", class: "title_text" %>
+        </div>
+        <input type="submit" value="送信する" class="button">
       <% end %>
-    </ul>
+      <ul class="paper">
+        <% @comments.each do |comment| %>
+          <li class="old_lists">
+            <%= comment.text %>
+            <span> : by </span>
+            <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
