@@ -46,3 +46,57 @@ hr {
   text-align: center;
 }
 
+/* 新規作成・編集ページ */
+.new_form {
+  text-align: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.state-select {
+  height: 30px;
+  width: 100px;
+  border: silver 4px inset;
+}
+
+.title_text {
+  box-sizing: border-box;
+  margin: 30px auto;
+  height: 40px;
+  width: 400px;
+  border: 2px solid gray;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 10%;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+  color: white;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid gray;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.button:hover {
+  box-shadow: none;
+  color: black;
+  background: white;
+  text-shadow: none;
+}
+
+.state_mark {
+  font-size:20px;
+  text-align:center;
+  line-height:0.95em;
+  font-weight:bold; /* 太字 */
+  color: #FFF;
+  text-shadow: 0 0 0.2em rgba(0,0,0,1);
+  margin-right: 10px;
+}

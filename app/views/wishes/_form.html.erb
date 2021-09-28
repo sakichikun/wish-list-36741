@@ -1,8 +1,14 @@
 <div class="list_frame">
   <%= form_with model: @wish, local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
-    <%= f.text_field :title, placeholder: "A new bucket list" %>
-    <%= f.submit "SEND" %>
-    <%= link_to '戻る', wishes_path %>
+    <div class="new_form">
+    <i class="far fa-edit"></i> 
+      <%= f.collection_select(:state_id, State.all, :id, :name, {}, {class:"state-select"}) %>
+      <div>
+        <%= f.text_field :title, placeholder: "A new bucket list", class: "title_text" %>
+      </div>
+      <input type="submit" value="送信する" class="button">
+    </div>
+    <%= link_to '戻る', wishes_path, class:"btn-flat-border" %>
   <% end %>
 </div>
