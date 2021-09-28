@@ -6,6 +6,7 @@
   <div class="list_frame">
     <% @wishes.each do |wish| %>
       <div class="content_post">
+        <p><%= wish.created_at %></p>
         <p class="text">
           <i class="far fa-lightbulb fa-2x"></i>
           <%= wish.title %>

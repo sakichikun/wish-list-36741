@@ -42,7 +42,7 @@ class WishesController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = @wish.comments.includes(:user)
+    @comments = @wish.comments.includes(:user).order("created_at DESC")
   end
 
   def search
