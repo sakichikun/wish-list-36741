@@ -3,26 +3,6 @@
     <p><b>BUCKET LISTS</b> 一覧</p>
   </div>
   <%= render partial: "search" %>
-  <div class="list_frame">
-    <% @wishes.each do |wish| %>
-      <div class="content_post">
-        <p><%= wish.created_at %></p>
-        <p class="text">
-          <i class="far fa-lightbulb fa-2x"></i>
-          <%= wish.title %>
-        </p>
-        <span class="state_mark"><%= wish.state.name %></span>
-        <span class="name">
-          <a href="/users/<%= wish.user.id %>">
-            <span>投稿者：<%= wish.user.nickname %> さん</span>
-          </a>
-        </span>
-        <div id="likes_buttons_<%= wish.id %>">
-          <%= render partial: 'likes/like', locals: {wish: wish} %>
-        </div>
-        <%= render partial: "button", locals: { wish: wish} %>
-      </div>
-      <hr>
-    <% end %>
-  </div>
+  <%= render partial: "listall", locals: { wish: @wishes} %>
+
 </div>

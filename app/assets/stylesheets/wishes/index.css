@@ -36,6 +36,15 @@ hr {
   box-sizing: border-box;
 }
 
+.dates {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.date {
+  margin-left: 5px;
+}
+
 /* バケットリスト横のアイコン */
 .fa-lightbulb {
   color: gray;

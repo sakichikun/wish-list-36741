@@ -1,0 +1,27 @@
+<div class="list_frame">
+  <% @wishes.each do |wish| %>
+    <div class="content_post">
+      <div class="dates">
+        <i class="far fa-clock"></i>
+        <span class="date">
+          <%= l wish.created_at %>
+        </span>
+      </div>
+      <p class="text">
+        <i class="far fa-lightbulb fa-2x"></i>
+        <%= wish.title %>
+      </p>
+      <span class="state_mark"><%= wish.state.name %></span>
+      <span class="name">
+        <a href="/users/<%= wish.user.id %>">
+          <span>投稿者：<%= wish.user.nickname %> さん</span>
+        </a>
+      </span>
+      <div id="likes_buttons_<%= wish.id %>">
+        <%= render partial: 'likes/like', locals: {wish: wish} %>
+      </div>
+      <%= render partial: "wishes/button", locals: { wish: wish} %>
+    </div>
+    <hr>
+  <% end %>
+</div>
