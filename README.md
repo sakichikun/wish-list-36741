@@ -17,6 +17,7 @@
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
 | title                 | string     | null: false                    |
+| state_id              | integer    | null: false                    |
 | user                  | references | null: false, foreign_key: true |
 
 ### Association
