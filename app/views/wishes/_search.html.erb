@@ -1,6 +1,6 @@
 <div class="look_for">
   <%= form_with(url: search_wishes_path, local: true, method: :get, class: "search_form") do |f| %>
-    <%= f.text_field :keyword, placeholder: "検索ワード" %>
-    <%= f.submit "検索" %>
+    <%= f.text_field :keyword, placeholder: "検索ワード", class: "title_text_small" %>
+    <%= f.submit "検索", class: "button" %>
   <% end %>
 </div>

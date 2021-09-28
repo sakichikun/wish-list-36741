@@ -67,6 +67,14 @@ hr {
   border: 2px solid gray;
 }
 
+.title_text_small {
+  box-sizing: border-box;
+  margin: 30px auto;
+  height: 40px;
+  width: 200px;
+  border: 2px solid gray;
+}
+
 .button {
   display: inline-block;
   border-radius: 10%;
