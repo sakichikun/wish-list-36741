@@ -37,19 +37,20 @@
       <%= form_with model: [@wish, @comment], local: true do |f| %>
         <div class="field">
           <%= f.label :text, "「コメント」", class: "state_markkk" %><br />
+          <%= render 'shared/error_messages', model: f.object %>
           <%= f.text_field :text, id:"comment_text", class: "title_text" %>
         </div>
         <input type="submit" value="送信する" class="button">
+        <ul class="paper">
+          <% @comments.each do |comment| %>
+            <li class="old_lists">
+              <%= comment.text %>
+              <span> : by </span>
+              <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
+            </li>
+          <% end %>
+        </ul>
       <% end %>
-      <ul class="paper">
-        <% @comments.each do |comment| %>
-          <li class="old_lists">
-            <%= comment.text %>
-            <span> : by </span>
-            <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
-          </li>
-        <% end %>
-      </ul>
     </div>
   </div>
 </div>

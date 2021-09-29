@@ -1,6 +1,6 @@
 <div class="list_frame">
   <%= form_with model: @wish, local: true do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
     <div class="new_form">
     <i class="far fa-edit"></i> 
       <%= f.collection_select(:state_id, State.all, :id, :name, {}, {class:"state-select"}) %>
