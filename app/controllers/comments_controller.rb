@@ -10,11 +10,11 @@ class CommentsController < ApplicationController
     end
   end
 
-  #def destroy
-    #@comment = Comment.find(params[:id])
-    #@comment.destroy
-    #redirect_to wish_comment_path(@wish.id)
-  #end
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    redirect_to "/wishes/#{comment.wish.id}"
+  end
 
   private
   def comment_params

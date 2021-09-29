@@ -22,7 +22,7 @@
         </a>
       </span>
       <div id="likes_buttons_<%= @wish.id %>">
-          <%= render partial: 'likes/like', locals: {wish: @wish} %>
+        <%= render partial: 'likes/like', locals: {wish: @wish} %>
       </div>
       <p>
         <% if user_signed_in? && current_user.id == @wish.user_id %>
@@ -41,15 +41,23 @@
           <%= f.text_field :text, id:"comment_text", class: "title_text" %>
         </div>
         <input type="submit" value="送信する" class="button">
-        <ul class="paper">
-          <% @comments.each do |comment| %>
-            <li class="old_lists">
-              <%= comment.text %>
-              <span> : by </span>
-              <%= link_to comment.user.nickname, "/users/#{comment.user.id}", class: :comment_user %>
-            </li>
-          <% end %>
-        </ul>
+        <% if @comments.present? %>
+          <ul class="paper">
+            <% @comments.each do |comment| %>
+              <li class="old_lists">
+                <%= comment.text %>
+                <span> : by </span>
+                <%= link_to comment.user.nickname, "/users/#{comment.user.id}" %>
+                <% if user_signed_in? && current_user.id == comment.user_id %>
+                  <span class="delete_set">
+                    <i class="fas fa-trash-alt"></i>
+                    <%= link_to '削除', comment_path(comment.id) ,method: :delete %>
+                  </span>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
       <% end %>
     </div>
   </div>
