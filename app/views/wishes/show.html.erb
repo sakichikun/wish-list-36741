@@ -46,13 +46,14 @@
             <% @comments.each do |comment| %>
               <li class="old_lists">
                 <%= comment.text %>
-                <span> : by </span>
-                <%= link_to comment.user.nickname, "/users/#{comment.user.id}" %>
-                <% if user_signed_in? && current_user.id == comment.user_id %>
+                <div class="by_name">by
+                  <%= link_to comment.user.nickname, "/users/#{comment.user.id}" %>
+                  <% if user_signed_in? && current_user.id == comment.user_id %>
                   <span class="delete_set">
                     <i class="fas fa-trash-alt"></i>
                     <%= link_to '削除', comment_path(comment.id) ,method: :delete %>
                   </span>
+                </div>
                 <% end %>
               </li>
             <% end %>

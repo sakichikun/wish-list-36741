@@ -7,6 +7,6 @@ class State < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :states
+  has_many :wishes
 
 end

@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
       redirect_to "/wishes/#{@comment.wish.id}"
     else
       @wish = Wish.find(params[:wish_id])
-      @comments = @wish.comments.includes(:user)
+      @comments = @wish.comments.includes(:user).order("created_at DESC")
       render "wishes/show"
     end
   end

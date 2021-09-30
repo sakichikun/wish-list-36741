@@ -176,11 +176,12 @@ hr {
 
 .old_lists {
   text-align: left;
-  position: relative;
+}
+
+.by_name {
+  text-align: right;
 }
 
 .delete_set {
-  position: absolute;
-  right: 5px;
-  top: 5px;
+  margin-left: 20px;
 }
