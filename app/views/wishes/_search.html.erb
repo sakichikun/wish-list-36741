@@ -1,8 +1,7 @@
 <div class="look_for">
   <%= search_form_for @q, url: search_wishes_path, class: "search_form" do |f| %>
-  <%#= form_with(url: search_wishes_path, local: true, method: :get, class: "search_form") do |f| %>
-    <%#= f.text_field :keyword, placeholder: "検索ワード", class: "title_text_small" %>
     <%= f.collection_select(:state_id_eq, State.all, :id, :name, {}, {class:"state-select"}) %>
+    <%= f.text_field :title_cont, placeholder: "検索ワード（任意）", class: "title_text_small" %>
     <%= f.submit "表示", class: "button" %>
   <% end %>
 </div>

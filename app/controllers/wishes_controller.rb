@@ -70,7 +70,4 @@ class WishesController < ApplicationController
     @q = Wish.ransack(params[:q])
   end
 
-  def search_params
-    params.require(:q).permit!
-  end
 end

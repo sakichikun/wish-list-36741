@@ -84,8 +84,8 @@ hr {
 .title_text_small {
   box-sizing: border-box;
   margin: 30px auto;
-  height: 40px;
-  width: 200px;
+  height: 30px;
+  width: 150px;
   border: 2px solid gray;
 }
 
