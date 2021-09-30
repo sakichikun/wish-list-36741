@@ -3,18 +3,5 @@
     <p><b>BUCKET LISTS</b> 検索結果</p>
   </div>
   <%= render partial: "search" %>
-  <div class="contents row">
-    <% @wishes.each do |wish| %>
-      <div class="content_post">
-        <p class="text"><%= wish.title %></p>
-          <span class="name">
-            <a href="/users/<%= wish.user.id %>">
-              <span>投稿者：<%= wish.user.nickname %> さん</span>
-            </a>
-          </span>
-        <%= render partial: "button", locals: { wish: wish} %>
-      </div>
-      <hr>
-    <% end %>
-  </div>
+  <%= render partial: "listall", locals: { wish: @wishes} %>
 </div>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'wishes#index'
+
+  get 'search', to: 'wishes#search'
   resources :wishes do
     resource :comments, only: [:create]
     collection do

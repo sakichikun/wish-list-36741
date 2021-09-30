@@ -1,6 +1,7 @@
 class WishesController < ApplicationController
   before_action :set_item, only: [:edit, :update, :destroy, :show]
   before_action :move_to_index, except: :index
+  before_action :create_searching_object, only: [:index, :search]
 
   def index
     @wishes = Wish.includes(:user).order("created_at DESC")
@@ -46,7 +47,8 @@ class WishesController < ApplicationController
   end
 
   def search
-    @wishes = Wish.search(params[:keyword])
+    @wishes = @q.result
+    #@wishes = Wish.search(params[:keyword])
   end
 
   private
@@ -62,5 +64,13 @@ class WishesController < ApplicationController
     unless user_signed_in?
       redirect_to action: :index
     end
+  end
+
+  def create_searching_object
+    @q = Wish.ransack(params[:q])
+  end
+
+  def search_params
+    params.require(:q).permit!
   end
 end
