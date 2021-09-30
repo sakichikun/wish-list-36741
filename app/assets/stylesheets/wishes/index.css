@@ -1,3 +1,30 @@
+.pic_posi {
+  margin-top: 130px;
+  text-align: center;
+  position: relative;
+}
+
+.pic_posi p {
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.top_pic {
+  width: 70vw;
+  opacity: 0.7;
+}
+
+.font_strong {
+  font-size: 1.5em;
+}
+
 .wish_image {
   margin: 20px auto;
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);

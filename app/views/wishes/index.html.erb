@@ -1,7 +1,17 @@
-<div class="contents_row">
-  <div class="my_top">
-    <p><b>BUCKET LISTS</b> 一覧</p>
+<% if user_signed_in? %>
+  <div class="contents_row">
+    <div class="my_top">
+      <p><b>BUCKET LISTS</b> 一覧</p>
+    </div>
+    <%= render partial: "search", locals: { q: @q} %>
+    <%= render partial: "listall", locals: { wish: @wishes} %>
   </div>
-  <%= render partial: "search", locals: { q: @q} %>
-  <%= render partial: "listall", locals: { wish: @wishes} %>
-</div>
+<% else %>
+  <div class="pic_posi">
+    <%= image_tag "presenttop.jpg", class: "top_pic" %>
+    <p>あなたの <span class="font_strong">BUCKET LIST </span>
+      <br>共有しませんか？
+      <br>描ける空間、<span class="font_strong">自分色の人生を。</span>
+    </p>
+  </div>
+<% end %>
