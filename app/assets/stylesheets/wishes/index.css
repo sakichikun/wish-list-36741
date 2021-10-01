@@ -1,5 +1,56 @@
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+
 .pic_posi {
-  margin-top: 130px;
+  margin-top: 200px;
   text-align: center;
   position: relative;
 }
@@ -19,6 +70,10 @@
 .top_pic {
   width: 70vw;
   opacity: 0.7;
+  background-origin: border-box;
+  background-clip: padding-box;
+  border: solid 1.5em rgba(0,0,0,0.2);
+  padding: 1em;
 }
 
 .font_strong {
@@ -53,7 +108,7 @@
 /* 投稿一覧 */
 .contents_row {
   text-align: center;
-  margin-top: 130px;
+  margin-top: 200px;
 }
 
 .content_post {

@@ -16,18 +16,31 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="top_title"><a href="/">I WANNA eat SALMON</a></h1>
+        <h1><a href="/">I WANNA eat SALMON</a></h1>
       </div>
       <% if user_signed_in? %>
       <div class="user_post">
-        <%= link_to "マイページ", user_path(current_user.id), class: "btn-circle-fishy" %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-circle-fishy" %>
-        <%= link_to "投稿する", new_wish_path, class: "btn-circle-fishy" %>
+        <ul class="menue">
+          <li class="btn-circle-fishy"><%= link_to "マイページ", user_path(current_user.id) %></li>
+          <li class="btn-circle-fishy"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li class="btn-circle-fishy"><%= link_to "投稿する", new_wish_path %></li>
+          <li><button class="btn-circle-fishy" id="js-show-popup">魔法</button>
+            <div class="popup" id="js-popup">
+              <div class="popup-inner">
+                <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+                <a href="https://www.shuzo.co.jp/">時は金ちなりくん。<br>大丈夫。自分を信じて！文字をクリックして＾＾</a>
+              </div>
+              <div class="black-background" id="js-black-bg"></div>
+            </div>
+          </li>
+        </ul>
       </div>
       <% else %>
         <div class="user_post">
-          <%= link_to "ログイン", new_user_session_path, class: "btn-circle-fishy" %>
-          <%= link_to "新規登録", new_user_registration_path, class: "btn-circle-fishy" %>
+          <ul class="menue">
+            <li class="btn-circle-fishy"><%= link_to "ログイン", new_user_session_path %></li>
+            <li class="btn-circle-fishy"><%= link_to "新規登録", new_user_registration_path %></li>
+          </ul>
         </div>
       <% end %>
     </header>
