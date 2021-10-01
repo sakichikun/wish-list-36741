@@ -1,9 +1,15 @@
 /* header全体 */
 header {
-  height: 160px;
+  height: 170px;
+  width: 100%;
   padding: 10px 0;
-  margin: 0 15vw;
-  text-align: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 0 20px 20px #fff;
 }
 
 /* I wanna eat SALMONのアレンジ */
@@ -36,29 +42,32 @@ h1:after {
   bottom: 0;
 }
 
-/* 投稿するボタン */
-.header__bar row {
-  position: relative;
+.menue {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .btn-circle-fishy {
-  display: inline-block;
-  text-decoration: none;
-  color: #FFF;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
-  border-radius: 50%;
+  display: block;
+  margin: 1vh 5vw;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
-  overflow: hidden;
+  border-radius: 50%;
   background-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+  overflow: hidden;
   transition: .4s;
+  
 }
 
 .btn-circle-fishy:hover {
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
+
 }
+
 
 footer {
   text-align: center;

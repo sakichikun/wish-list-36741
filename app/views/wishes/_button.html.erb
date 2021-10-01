@@ -3,6 +3,6 @@
     <% if user_signed_in? && current_user.id == wish.user_id %>
       <%= link_to '編集', edit_wish_path(wish.id), method: :get, class:"btn-flat-border" %>
       <%= link_to '削除', wish_path(wish.id), method: :delete, class:"btn-flat-border" %>
-        <%= link_to 'いいね一覧', like_path(wish.id), class:"btn-flat-border" %>
+      <%= link_to 'いいね一覧', like_path(wish.id), class:"btn-flat-border" %>
     <% end %>
 </p>
