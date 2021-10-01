@@ -1,10 +1,10 @@
 function popupImage() {
-  var popup = document.getElementById('js-popup');
+  const popup = document.getElementById('js-popup');
   if(!popup) return;
 
-  var blackBg = document.getElementById('js-black-bg');
-  var closeBtn = document.getElementById('js-close-btn');
-  var showBtn = document.getElementById('js-show-popup');
+  const blackBg = document.getElementById('js-black-bg');
+  const closeBtn = document.getElementById('js-close-btn');
+  const showBtn = document.getElementById('js-show-popup');
 
   closePopUp(blackBg);
   closePopUp(closeBtn);
