@@ -11,7 +11,11 @@
         <i class="far fa-lightbulb fa-2x"></i>
         <%= wish.title %>
       </p>
-      <span class="state_mark"><%= wish.state.name %></span>
+      <% if wish.state.id == 4 %>
+        <span class="state_mark"><i class="fas fa-medal">.</i><%= wish.state.name %></span>
+      <% else %>
+        <span class="state_marks"><%= wish.state.name %></span>
+      <% end %>
       <span class="name">
         <a href="/users/<%= wish.user.id %>">
           <span>投稿者：<%= wish.user.nickname %> さん</span>
