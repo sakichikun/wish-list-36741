@@ -48,3 +48,9 @@
 
 - belongs_to :user
 - belongs_to :wish
+
+## relationships テーブル
+| Column                | Type       | Options                        |
+| --------------------- | ---------- | ------------------------------ |
+| follower_id           | integer    | null: false                    |
+| followed_id           | integer    | null: false                    |

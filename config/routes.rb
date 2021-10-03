@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     end
   end
   resources :comments, only: [:destroy]
-  resources :users, only: :show
+  resources :users, only: :show do
+    resource :relationships, only: [:create, :destroy]
+    get 'followings' => 'relationships#followings', as: 'followings'
+    get 'followers' => 'relationships#followers', as: 'followers'
+  end
   
   post 'like/:id' => 'likes#create', as: 'create_like' #asを使ってPrefixのpathを任意に指定
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
