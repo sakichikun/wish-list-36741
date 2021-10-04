@@ -21,6 +21,9 @@
           <span>投稿者：<%= wish.user.nickname %> さん</span>
         </a>
       </span>
+      <% if wish.image.present? %>
+        <span><i class="fas fa-camera"></i></span>
+      <% end %>
       <div id="likes_buttons_<%= wish.id %>">
         <%= render partial: 'likes/like', locals: {wish: wish} %>
       </div>
