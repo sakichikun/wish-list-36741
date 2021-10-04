@@ -4,7 +4,7 @@ class WishesController < ApplicationController
   before_action :create_searching_object, only: [:index, :search]
 
   def index
-    @wishes = Wish.includes(:user).order("created_at DESC")
+    @wishes = Wish.includes(:user).order("created_at DESC").page(params[:page]).per(10)
   end
 
   def new

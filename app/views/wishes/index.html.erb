@@ -24,6 +24,7 @@
       <p><b>BUCKET LISTS</b></p>
     </div>
     <%= render partial: "search", locals: { q: @q} %>
+      <%= paginate @wishes %>
     <%= render partial: "listall", locals: { wish: @wishes} %>
   </div>
 <% else %>
