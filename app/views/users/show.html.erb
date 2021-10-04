@@ -1,7 +1,7 @@
 <% if user_signed_in? && current_user.id == @user.id %>
   <ul class="follow_link">
-  <li class="btn-circle-fishy"><%= link_to "フォロー", user_followings_path(@user.id) %></li>
-  <li class="btn-circle-fishy"><%= link_to "フォロワー", user_followers_path(@user.id) %></li>
+    <li class="btn-circle-fishy"><%= link_to "フォロー", user_followings_path(@user.id) %></li>
+    <li class="btn-circle-fishy"><%= link_to "フォロワー", user_followers_path(@user.id) %></li>
   </ul>
 <% else %>
   <% if current_user.following?(@user) %>

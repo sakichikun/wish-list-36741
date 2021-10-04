@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   
   post 'like/:id' => 'likes#create', as: 'create_like' #asを使ってPrefixのpathを任意に指定
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
-  resources :likes, only: :show
+  resources :likes, only: [:show, :index]
 end

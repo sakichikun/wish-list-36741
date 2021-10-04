@@ -1,3 +1,8 @@
+.ranks {
+  margin: 200px;
+  text-align: center;
+}
+
 .star {
   display: inline-block;
   width: 40px;

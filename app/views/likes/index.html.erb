@@ -1,0 +1,6 @@
+<div class="ranks">
+  <% @all_ranks.each.with_index(1) do |wish, i| %>
+    <div>第<%= i %>位</div>
+    <%= wish.title %>
+  <% end %>
+</div>

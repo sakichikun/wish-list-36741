@@ -1,6 +1,10 @@
 class LikesController < ApplicationController
-  before_action :set_item
+  before_action :set_item, except: :index
   before_action :move_to_index
+
+  def index
+    @all_ranks = Wish.find(Like.group(:wish_id).order('count(wish_id)desc').limit(3).pluck(:wish_id))
+  end
 
   def create
     Like.create(user_id: current_user.id, wish_id: params[:id])
