@@ -1,6 +1,14 @@
-<div class="ranks">
-  <% @all_ranks.each.with_index(1) do |wish, i| %>
-    <div>第<%= i %>位</div>
-    <%= wish.title %>
-  <% end %>
+<div class="contents_row">
+  <div class="my_top">
+    <p>いいねランキング</p>
+  </div>
+  <div class="list_frame">
+    <% @all_ranks.each.with_index(1) do |wish, i| %>
+      <div class= "ranks">
+        <h2>第<%= i %>位</h2>
+        <%= wish.title %>
+        <p>いいね数：<%= wish.likes.count %></p>
+      </div>
+    <% end %>
+  </div>
 </div>

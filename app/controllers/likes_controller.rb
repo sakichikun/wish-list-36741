@@ -2,6 +2,7 @@ class LikesController < ApplicationController
   before_action :set_item, except: :index
   before_action :move_to_index
 
+
   def index
     @all_ranks = Wish.find(Like.group(:wish_id).order('count(wish_id)desc').limit(3).pluck(:wish_id))
   end
@@ -32,7 +33,7 @@ class LikesController < ApplicationController
 
   def move_to_index
     unless user_signed_in?
-      redirect_to root_path
+      redirect_to action: :index
     end
   end
 end
