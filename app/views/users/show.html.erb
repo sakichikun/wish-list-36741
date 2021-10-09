@@ -15,7 +15,11 @@
 <div class="contents_row">
   <div class="my_top">
     <p class="special" onclick="showBallon()"><%= @nickname %>さんの BUCKET LIST
-      <span class="balloon1" id="makeImg"><%= @user.introduction %></span>
+      <% if @user.introduction.present? %>
+        <span class="balloon1" id="makeImg"><%= @user.introduction %></span>
+      <% else %>
+        <span class="balloon1" id="makeImg">ー自己紹介文は未設定ですー</span>
+      <% end %>
     </p>
   </div>
   <%= render partial: "wishes/listall", locals: { wish: @wishes} %>
