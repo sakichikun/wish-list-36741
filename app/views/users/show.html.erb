@@ -2,6 +2,7 @@
   <ul class="follow_link">
     <li class="btn-circle-fishy"><%= link_to "フォロー", user_followings_path(@user.id) %></li>
     <li class="btn-circle-fishy"><%= link_to "フォロワー", user_followers_path(@user.id) %></li>
+    <li class="btn-circle-fishy"><%= link_to "プロフ編集", edit_user_path(@user.id) %></li>
   </ul>
 <% else %>
   <% if current_user.following?(@user) %>
@@ -13,7 +14,9 @@
 
 <div class="contents_row">
   <div class="my_top">
-    <p><b><%= @nickname %></b> さんの BUCKET LIST</p>
+    <p class="special" onclick="showBallon()"><%= @nickname %>さんの BUCKET LIST
+      <span class="balloon1" id="makeImg"><%= @user.introduction %></span>
+    </p>
   </div>
   <%= render partial: "wishes/listall", locals: { wish: @wishes} %>
 </div>

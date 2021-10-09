@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true, length: {maximum: 10}
+  validates :introduction, length: { maximum: 80 }
 
   has_many :wishes, dependent: :destroy
   has_many :comments, dependent: :destroy

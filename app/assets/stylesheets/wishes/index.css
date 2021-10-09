@@ -177,6 +177,14 @@ hr {
   border: 2px solid gray;
 }
 
+.title_text_area {
+  box-sizing: border-box;
+  margin: 30px auto;
+  height: 80px;
+  width: 400px;
+  border: 2px solid gray;
+}
+
 .button {
   display: inline-block;
   border-radius: 10%;
