@@ -5,6 +5,7 @@
     </div>
     <%= form_with model: [@user], local: true do |f| %>
     <div class="list_frame">
+      <%= render 'shared/error_messages', model: f.object %>
       <%= f.label :nickname, "ユーザー名", class: "state_markkk" %><br>
       <%= f.text_field :nickname, class: "title_text_small" %><br>
       <%= f.label :introduction, "自己紹介", class: "state_markkk" %><br>
