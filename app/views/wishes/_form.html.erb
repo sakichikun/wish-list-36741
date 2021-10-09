@@ -7,8 +7,9 @@
       <div>
         <%= f.text_field :title, placeholder: "A new bucket list", class: "title_text" %>
       </div>
-      <%= f.file_field :image, class: 'hidden' %>
-      <input type="submit" value="送信する" class="button">
+      <%= f.file_field :image, id: 'message_image' %>
+      <input type="submit" value="送信する", class="button">
+      <div id="image-list"></div>
     </div>
     <%= link_to '戻る', wishes_path, class:"btn-flat-border" %>
   <% end %>
