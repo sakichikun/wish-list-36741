@@ -28,11 +28,13 @@
     <%= render partial: "listall", locals: { wish: @wishes} %>
   </div>
 <% else %>
-  <div class="pic_posi">
-    <%= image_tag "presenttop.jpg", class: "top_pic" %>
-    <p>あなたの <span class="font_strong">BUCKET LIST </span>
-      <br>共有しませんか？
-      <br>描ける空間、<span class="font_strong">自分色の人生を。</span>
-    </p>
+  <div class="contents_row">
+    <div class="pic_posi">
+      <%= image_tag "presenttop.jpg", class: "top_pic" %>
+      <p>あなたの <span class="font_strong">BUCKET LIST </span>
+        <br>共有しませんか？
+        <br>描ける空間、<span class="font_strong">自分色の人生を。</span>
+      </p>
+    </div>
   </div>
 <% end %>
