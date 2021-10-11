@@ -96,7 +96,7 @@ https://docs.google.com/spreadsheets/d/1ljGomuHRVDNKeBgkONZBU39k71Yc8GwV3jfOLzQe
 ・z-indexで重なりの調整を試みましたが、思い通りの表示ができなかったため改善したいです  
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/3bd060297f8587b845f44959526a89f7.png)](https://gyazo.com/3bd060297f8587b845f44959526a89f7)
+[![Image from Gyazo](https://i.gyazo.com/215b99aec8ecf2c88a18cdb5338fc01b.png)](https://gyazo.com/215b99aec8ecf2c88a18cdb5338fc01b)
 
 # 開発環境
 Ruby/HTML/CSS/jQuery/JavaScript  
