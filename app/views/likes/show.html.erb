@@ -3,18 +3,22 @@
     <p>いいね 一覧</p>
   </div>
   <div class="list_frame">
-  <table>
-    <thead>
-      <tr>
-        <th>name</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @likes.each do |like| %>
+  <% if @likes.present? %>
+    <table>
+      <thead>
         <tr>
-          <td><a href="/users/<%= like.user.id %>"><%= like.user.nickname %></a>さん</td>
+          <th>name</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+      <% @likes.each do |like| %>
+          <tr>
+            <td><a href="/users/<%= like.user.id %>"><%= like.user.nickname %></a>さん</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>いいねしたユーザーはいません</p>
+  <% end %>
 </div>
