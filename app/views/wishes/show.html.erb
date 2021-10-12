@@ -14,13 +14,23 @@
         <i class="far fa-lightbulb fa-2x"></i>
         <%= @wish.title %>
       </p>
+      <div>
+        <% days = (@wish.due_time.to_date - Date.today).to_i %>
+        <% if days > -1 %>
+          <p>達成目標日まであと<span class="due_date"><%= days %></span> 日</p>
+        <% else %>
+          <p>終了</p>
+        <% end %>
+      </div>
       <div><%= image_tag @wish.image.variant(resize: '400x400'), class: 'wish_image' if @wish.image.attached? %></div>
-      <span class="state_mark"><%= @wish.state.name %></span>
-      <span class="name">
-        <a href="/users/<%= @wish.user.id %>">
-          <span>投稿者：<%= @wish.user.nickname %> さん</span>
-        </a>
-      </span>
+      <div class="sta_na">
+        <span class="state_mark"><%= @wish.state.name %></span>
+        <span class="name">
+          <a href="/users/<%= @wish.user.id %>">
+            <span>投稿者：<%= @wish.user.nickname %> さん</span>
+          </a>
+        </span>
+      </div>
       <div id="likes_buttons_<%= @wish.id %>">
         <%= render partial: 'likes/like', locals: {wish: @wish} %>
       </div>
