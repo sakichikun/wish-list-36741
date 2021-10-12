@@ -14,7 +14,7 @@
 
 <div class="contents_row">
   <div class="my_top">
-    <p class="special" onclick="showBallon()"><%= @nickname %>さんの BUCKET LIST
+    <p class="special" id="js-special"><%= @nickname %>さんの BUCKET LIST
       <% if @user.introduction.present? %>
         <span class="balloon1" id="makeImg"><%= @user.introduction %></span>
       <% else %>
