@@ -4,7 +4,7 @@ I WANNA eat SALMON
 # アプリケーションの概要
 ログイン機能・投稿機能・投稿編集機能・投稿詳細機能・投稿削除機能・ユーザー編集機能  
 コメント機能・投稿検索機能・いいね機能・いいねランキング機能・フォロー機能・ページネーション機能  
-画像のスライドショー機能・ポップアップ励まし機能  
+画像のスライドショー機能・ポップアップ励まし機能・カウントダウン機能  
 
 # URL
 https://wish-list-36741.herokuapp.com/
@@ -23,9 +23,10 @@ Basic認証 password：1111
 
 # 目指した課題解決
 平凡な毎日を過ごしている人に対し、より豊かな人生経験をするためのアプリケーションです。  
-挑戦したいことがあった時、自分1人で成し遂げることが難しいことがあります。  
+映画「The Bucket List（最高の人生の見つけ方）」を3回視聴し、多くのことに挑戦できる人生を体現したいと考え考案しました。  
+しかし挑戦したいことがあった時、自分1人で成し遂げることが難しいことがあります。  
 仲間がいれば、1歩を踏み出す力が湧くと考えます。  
-そんな仲間を見つけるため、またアイディアをもらうことも、達成後の画像からエネルギーをもらうことも可能だと考えます。
+そんな仲間を見つけるため、またアイディアをもらうことも、他者の頑張りからエネルギーをもらうことも可能だと考えます。
 
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/1ljGomuHRVDNKeBgkONZBU39k71Yc8GwV3jfOLzQeMDQ/edit#gid=282075926
@@ -94,9 +95,11 @@ https://docs.google.com/spreadsheets/d/1ljGomuHRVDNKeBgkONZBU39k71Yc8GwV3jfOLzQe
 ・ランキングをdoneの数順にしたいです  
 ・スライドショーに表示する画像をユーザーが投稿したdoneの中からランダムに表示させたいです  
 ・z-indexで重なりの調整を試みましたが、思い通りの表示ができなかったため改善したいです  
+・レスポンシブデザインを整えたいです  
+・単体テストコードの不足分の追加と、結合テストコードの実行をしたいです  
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/215b99aec8ecf2c88a18cdb5338fc01b.png)](https://gyazo.com/215b99aec8ecf2c88a18cdb5338fc01b)
+[![Image from Gyazo](https://i.gyazo.com/3c7e6d48d9e057b741854becf54e1934.png)](https://gyazo.com/3c7e6d48d9e057b741854becf54e1934)
 
 # 開発環境
 Ruby/HTML/CSS/jQuery/JavaScript  
