@@ -122,6 +122,7 @@ Ruby on Rails/MySQL/Git/GitHub
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
 | title                 | string     | null: false                    |
+| due_time              | datetime   | null: false                    |
 | state_id              | integer    | null: false                    |
 | user                  | references | null: false, foreign_key: true |
 
