@@ -1,9 +1,16 @@
 function showBalloon(){
   const wObjballoon = document.getElementById('makeImg');
-  if (wObjballoon.className == "balloon1"){
-    wObjballoon.className = "balloon";
-  } else {
-    wObjballoon.className = "balloon1"
+
+  if(!wObjballoon) return;
+  const bal = document.getElementById('ballon');
+  const special = document.getElementById('js-special');
+  closePopUp(special);
+  closePopUp(bal);
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      wObjballoon.classList.toggle('balloon')
+    })
   }
 }
-window.addEventListener('click', showBalloon);
+window.addEventListener('load', showBalloon);
