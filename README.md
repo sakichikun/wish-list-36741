@@ -40,19 +40,19 @@ https://docs.google.com/spreadsheets/d/1ljGomuHRVDNKeBgkONZBU39k71Yc8GwV3jfOLzQe
 ・バケットリストの状態を選択する必要があります  
 (want：基本、soon：実現の明確な予定が決まったら、done：達成できたら)  
 ・状態は編集ページより変更が可能です  
-[![Image from Gyazo](https://i.gyazo.com/af3a1588773ff28c566a50ce6a1f4d9d.gif)](https://gyazo.com/af3a1588773ff28c566a50ce6a1f4d9d)
+[![Image from Gyazo](https://i.gyazo.com/490a5cdc5e319a19c57260421531c342.gif)](https://gyazo.com/490a5cdc5e319a19c57260421531c342)
 
 ### 詳細表示機能/カウントダウン機能
 ・画像を投稿していればこちらのページで閲覧ができます  
 ・詳細ページで投稿へのコメントができます  
 ・カウントダウン機能は、達成目標日までの残り日数を表示します  
 ・目標日までに達成した場合及び、目標日を過ぎた場合は「終了」の表示が出ます  
-[![Image from Gyazo](https://i.gyazo.com/b673417eccda842644c41f5d57c94064.gif)](https://gyazo.com/b673417eccda842644c41f5d57c94064)
+[![Image from Gyazo](https://i.gyazo.com/6ea8e84d7197e68fc7a691264a06e8e9.gif)](https://gyazo.com/6ea8e84d7197e68fc7a691264a06e8e9)
 
 ### コメント機能
 ・1件以上の投稿があれば、投稿一覧が表示されます  
 ・コメントの投稿者は自分の投稿を消すことができます  
-[![Image from Gyazo](https://i.gyazo.com/a2d93be5a8b7742177e3b0099fe0be26.gif)](https://gyazo.com/a2d93be5a8b7742177e3b0099fe0be26)
+[![Image from Gyazo](https://i.gyazo.com/c5aa29d2b1a300212818659e34e211a3.gif)](https://gyazo.com/c5aa29d2b1a300212818659e34e211a3)
 
 ### 絞り込み検索機能
 ・バケットリストの状態ごと（want/soon/done）に限定表示ができます  
