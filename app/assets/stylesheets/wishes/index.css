@@ -1,3 +1,19 @@
+.image_file {
+  margin: 40px;
+}
+
+.sta_na {
+  margin-top: 40px;
+}
+
+.due_date {
+  font-size: 30px;
+  font-weight: 700;
+  color: transparent;
+  background: repeating-linear-gradient(0deg, #757575 0.1em, #9E9E9E 0.2em, #E8E8E8 0.3em, #9E9E9E 0.4em, #757575 0.5em); 
+  -webkit-background-clip: text;
+}
+
 .popup {
   position: fixed;
   left: 0;

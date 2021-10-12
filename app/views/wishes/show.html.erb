@@ -16,15 +16,19 @@
       </p>
       <div>
         <% days = (@wish.due_time.to_date - Date.today).to_i %>
-        <% if days > -1 %>
-          <p>達成目標日まであと<span class="due_date"><%= days %></span> 日</p>
+        <% if days > -1 && @wish.state.id != 4 %>
+          <p>達成目標まであと <span class="due_date"><%= days %></span> 日</p>
         <% else %>
-          <p>終了</p>
+          <p class="due_date">終了</p>
         <% end %>
       </div>
       <div><%= image_tag @wish.image.variant(resize: '400x400'), class: 'wish_image' if @wish.image.attached? %></div>
       <div class="sta_na">
-        <span class="state_mark"><%= @wish.state.name %></span>
+        <% if @wish.state.id == 4 %>
+          <span class="state_mark"><i class="fas fa-medal">.</i><%= @wish.state.name %></span>
+        <% else %>
+          <span class="state_marks"><%= @wish.state.name %></span>
+        <% end %>
         <span class="name">
           <a href="/users/<%= @wish.user.id %>">
             <span>投稿者：<%= @wish.user.nickname %> さん</span>
