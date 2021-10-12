@@ -7,7 +7,10 @@
       <div>
         <%= f.text_field :title, placeholder: "A new bucket list", class: "title_text" %>
       </div>
-      <%= f.file_field :image, id: 'message_image' %>
+      <%= f.date_field :due_time %>
+      <br>
+      <%= f.file_field :image, id: 'message_image', class: "image_file" %>
+      <br>
       <input type="submit" value="送信する", class="button">
       <div id="image-list"></div>
     </div>

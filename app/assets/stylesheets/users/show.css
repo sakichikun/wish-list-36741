@@ -110,7 +110,7 @@
   height: 900px;
   overflow: scroll;
   text-align: center;
-  padding: 80px 40px;
+  padding: 40px;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   background: linear-gradient(-65deg, #E8E8E8 35%, #fff 50%, #E8E8E8 75%,#fff );
