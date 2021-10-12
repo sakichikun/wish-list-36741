@@ -42,9 +42,11 @@ https://docs.google.com/spreadsheets/d/1ljGomuHRVDNKeBgkONZBU39k71Yc8GwV3jfOLzQe
 ・状態は編集ページより変更が可能です  
 [![Image from Gyazo](https://i.gyazo.com/af3a1588773ff28c566a50ce6a1f4d9d.gif)](https://gyazo.com/af3a1588773ff28c566a50ce6a1f4d9d)
 
-### 詳細表示機能
+### 詳細表示機能/カウントダウン機能
 ・画像を投稿していればこちらのページで閲覧ができます  
 ・詳細ページで投稿へのコメントができます  
+・カウントダウン機能は、達成目標日までの残り日数を表示します  
+・目標日までに達成した場合及び、目標日を過ぎた場合は「終了」の表示が出ます  
 [![Image from Gyazo](https://i.gyazo.com/b673417eccda842644c41f5d57c94064.gif)](https://gyazo.com/b673417eccda842644c41f5d57c94064)
 
 ### コメント機能
