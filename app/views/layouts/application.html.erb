@@ -24,6 +24,20 @@
           <li class="btn-circle-fishy"><%= link_to "マイページ", user_path(current_user.id) %></li>
           <li class="btn-circle-fishy"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <li class="btn-circle-fishy"><%= link_to "投稿する", new_wish_path %></li>
+          <li><button class="btn-circle-fishy" id="js-show-popup-sis">Q&A</button>
+            <div class="popup" id="js-popup-sis">
+            <div class="popup-inner">
+              <div class="close-btn" id="js-close-btn-sis"><i class="fas fa-times"></i></div>
+              Q.want/soon/doneって何ですか？<br>
+              　A.バケットリストの状態です。基本的にはwant、達成する予定日が決まったらsoon、達成したらdoneです。随時、編集で切り替えましょう。<br><br>
+              Q.投稿者の名前の横にあるマークは何ですか？<br>
+              　A.　<i class="fas fa-camera"></i>と<i class="far fa-bell"></i>の2種類があります。<i class="fas fa-camera"></i>は写真の添付の有無を示します。
+              <i class="far fa-bell"></i>は未達成のバケットリストの達成目標日が残り1ヶ月を切ると表示されます。<br><br>
+              Q.検索ワードを入力しても検索結果が表示されません。<br>
+              　A.こちらはバケットリストの状態と連動しています。検索ワードと一緒にwant/soon/doneを選択してみましょう。
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
       <% else %>
