@@ -89,7 +89,7 @@ h1:after {
 .btn-circle-fishy:hover {
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
-
+  cursor: pointer;
 }
 
 
