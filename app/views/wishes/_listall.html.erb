@@ -22,7 +22,11 @@
         </a>
       </span>
       <% if wish.image.present? %>
-        <span><i class="fas fa-camera"></i></span>
+        <i class="fas fa-camera"></i>
+      <% end %>
+      <% days = (wish.due_time.to_date - Date.today).to_i %>
+      <% if days < 30 && wish.state.id == 2 %>
+        <i class="far fa-bell fa-2x"></i>
       <% end %>
       <div id="likes_buttons_<%= wish.id %>">
         <%= render partial: 'likes/like', locals: {wish: wish} %>
