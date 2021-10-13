@@ -55,16 +55,6 @@
   font-size: 20px;
   color: #333;
 }
-.black-background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: rgba(0,0,0,.8); */
-  z-index: 100;
-  cursor: pointer;
-}
 
 .pic_posi {
   text-align: center;
