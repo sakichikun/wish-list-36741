@@ -1,4 +1,4 @@
-h2 {
+h2,h3 {
   text-align: center;
   font-family:  serif;
   letter-spacing: 0.2rem;
@@ -11,9 +11,10 @@ h2 {
 }
 
 .slideshow-container {
-  width: 680px;
-  height: 450px;
+  width: 50vw;
+  height: 400px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .button_ja {
@@ -106,4 +107,30 @@ footer {
 
 ul {
   list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .btn-circle-fishy {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .btn-circle-fishy {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 8px;
+  }
+
+  .slide_image {
+    width: 50vw;
+    height: 150px;
+  }
 }
