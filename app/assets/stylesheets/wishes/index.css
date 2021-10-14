@@ -118,7 +118,6 @@
   padding-top: 200px;
   padding-bottom: 30px;
   background: linear-gradient(to bottom,#fff , #E8E8E8 35%, #fff 50%, #E8E8E8 75%,#fff );
-  /* background: linear-gradient(to bottom, #fff, #E8E8E8 20%, #9E9E9E 45%, #757575 60%,#9E9E9E 65%,#E8E8E8 75%,#fff ); */
   z-index: -20;
 }
 

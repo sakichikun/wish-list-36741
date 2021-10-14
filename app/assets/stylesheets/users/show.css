@@ -36,7 +36,7 @@
 .follow_link {
   position: fixed;
   top: 200px;
-  light: 0;
+  left: 0;
 }
 
 /* 上のリボン見出し */
@@ -106,7 +106,7 @@
 /* 一覧の枠組み */
 .list_frame {
   margin: 30px auto;
-  width: 80vh;
+  width: 50vw;
   height: 900px;
   overflow: scroll;
   text-align: center;
