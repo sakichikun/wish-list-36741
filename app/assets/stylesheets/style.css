@@ -20,6 +20,7 @@ h2 {
   font-size: 20px;
   background-color: white;
   font-family:  serif;
+  display: none; /* JSが未処理のため非表示 */
 }
 
 /* header全体 */
