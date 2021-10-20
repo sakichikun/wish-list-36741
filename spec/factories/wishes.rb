@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :wish do
     title {Faker::Lorem.sentence}
-    due_time {2021-10-24}
+    due_time {Faker::Date.backward}
     state_id {2}
     association :user
 
